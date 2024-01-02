@@ -79,32 +79,35 @@ const App = () => {
     //   </div>
     // </>
     <>
-    <div className="App">
-      <Navbar setToken={setToken} count={cart.length} handleShow={handleShow} />
-
-      {showCart ? (
-        token ? (
-          cart.length === 0 ? (
-            <div className="emptycart">Your Cart is Empty...</div>
+      <div className="App">
+        <Navbar
+          setToken={setToken}
+          count={cart.length}
+          handleShow={handleShow}
+        />
+        {showCart ? (
+          token ? (
+            cart.length === 0 ? (
+              <div className="emptycart">Your Cart is Empty...</div>
+            ) : (
+              <CartList cart={cart} setCart={setCart} />
+            )
           ) : (
-            <CartList cart={cart} setCart={setCart} />
+            <Login token={token} setToken={setToken} />
           )
         ) : (
-          <Login token={token} setToken={setToken} />
-        )
-      ) : (
-        <Product addToCart={addToCart} />
-      )}
+          <Product addToCart={addToCart} />
+        )}
 
-      {warning && (
-        <div className="warning">
-          Product is already available in the cart
-        </div>
-      )}
+        {warning && (
+          <div className="warning">
+            Product is already available in the cart
+          </div>
+        )}
 
-      {/* <Footer /> */}
-    </div>
-  </>
+        {/* <Footer /> */}
+      </div>
+    </>
   );
 };
 

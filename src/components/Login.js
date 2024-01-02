@@ -40,7 +40,7 @@ const Login = ({ token, setToken }) => {
       <div className="login-inputs">
         {/* <label htmlFor="username">Enter Username: </label> */}
         <input
-          type="text"
+          type="email"
           placeholder="UserName..."
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
