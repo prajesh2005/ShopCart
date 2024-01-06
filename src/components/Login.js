@@ -9,11 +9,10 @@ const Login = ({ token, setToken }) => {
   const [error, setError] = useState("");
 
   const loginHandler = () => {
-
-    //after entering wrong credentials ....this will clear the input fields 
-    setError("")
-    setPassword("")
-    setUserName("")
+    //after entering wrong credentials ....this will clear the input fields
+    setError("");
+    setPassword("");
+    setUserName("");
 
     axios({
       url: "https://reqres.in/api/login",
@@ -27,7 +26,7 @@ const Login = ({ token, setToken }) => {
       .then((res) => {
         console.log(res.data.token);
         setToken(res.data.token);
-        localStorage.setItem("userToken",res.data.token)
+        localStorage.setItem("userToken", res.data.token);
       })
       .catch((err) => {
         console.log(err.response);
@@ -38,7 +37,6 @@ const Login = ({ token, setToken }) => {
   return (
     <div className="login">
       <div className="login-inputs">
-        {/* <label htmlFor="username">Enter Username: </label> */}
         <input
           type="email"
           placeholder="UserName..."
@@ -46,7 +44,6 @@ const Login = ({ token, setToken }) => {
           onChange={(e) => setUserName(e.target.value)}
         />
 
-        {/* <label htmlFor="password">Enter Password: </label> */}
         <input
           type="password"
           placeholder="Password..."
@@ -64,3 +61,6 @@ const Login = ({ token, setToken }) => {
 };
 
 export default Login;
+
+//  "email": "eve.holt@reqres.in",
+// "password": "cityslicka"

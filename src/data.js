@@ -1,4 +1,4 @@
-const list = [
+const data = [
   {
     amount:1,
     id: 1,
@@ -286,4 +286,4 @@ const list = [
     },
   },
 ];
-export default list;
+export default data;
