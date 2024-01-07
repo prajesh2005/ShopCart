@@ -151,8 +151,9 @@
   cursor: pointer;
   width: 33%;
   margin-left: 10%;
-  margin-top: 1rem;
-  margin-bottom: 0.2rem;
+  margin-right: 10%;
+  /* margin-top: 1rem; */
+  /* margin-bottom: 0.2rem; */
   color: white;
   background-color: rgb(0, 157, 255);
 }
@@ -175,9 +176,8 @@
   cursor: pointer;
   width: 34%;
   margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 1rem;
-  margin-bottom: 0.2rem;
+  /* margin-top: 1rem; */
+  /* margin-bottom: 0.2rem; */
 }
 
 .viewdetails:hover {
@@ -841,6 +841,10 @@ img {
 
 .payment-container {
   text-align: center;
+  background-color: rgb(245, 245, 245);
+  padding: 0 20px 20px 20px;
+  border-radius: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .payment-title {
@@ -849,11 +853,12 @@ img {
 }
 
 .credit-card {
-  background-color: whitesmoke;
+  /* background-color: red; */
   border-radius: 20px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   margin-top: 10px;
+  text-align: center;
   justify-content: center;
 }
 
@@ -865,19 +870,56 @@ img {
   width: 100%;
 }
 
+.previous-btn {
+  opacity: 0.8;
+  background-color: rgb(255, 111, 49);
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 0.6em;
+  padding: 12px 10px;
+  font-weight: 600;
+}
+
+.previous-btn:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  color: white;
+}
+
 .pay-btn {
-  width: 100px;
+  /* width: 100px; */
   background-color: rgb(74, 215, 159);
   border: none;
   border-radius: 10px;
   font-size: 18px;
   margin-top: 0.6em;
-  padding: 12px 0;
+  padding: 12px 10px;
   font-weight: 600;
+}
+
+.next-btn {
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: rgb(33, 166, 255);
+  opacity: 0.8;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.next-btn:hover {
+  /* color: black; */
+  opacity: 1;
+  background-color: rgb(33, 166, 255);
+  border: 1px solid gray;
+  transform: scale(1.1);
 }
 
 .pay-btn:hover {
   transform: scale(1.1);
+  background-color: rgb(74, 215, 159);
 }
 
 .credit-card form {
@@ -885,9 +927,9 @@ img {
   border-radius: 20px;
 }
 
-.credit-card .title {
+.title {
   font-family: serif;
-  font-size: 1em;
+  font-size: 1.3em;
   color: #2C3E50;
   border-bottom: 1px solid gray;
   margin-bottom: 1em;
@@ -895,26 +937,28 @@ img {
   padding-bottom: 8px;
 }
 
-.credit-card .card-details {
-  padding: 25px 25px 15px;
-}
-
-.credit-card .card-details label {
+.mode {
   font-family: serif;
   font-weight: 400;
-  margin-bottom: 5px;
-  color: #6d6d6d;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  color: #444444;
   text-transform: uppercase;
 }
 
-.credit-card .card-details input[type="text"] {
+.input {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   display: block;
-  background: #f8f8f8;
+  background: #ffffff;
   border: none;
   border-radius: 10px;
   border-bottom: 1px solid #757575;
+}
+
+.payment-amount {
+  color: rgb(255, 213, 0);
+  font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -923,8 +967,8 @@ img {
     font-size: 10px
   }
 
-  .credit-card .title {
-    font-size: 1.5em;
+  .title {
+    font-size: 1.2em;
   }
 
   .credit-card .row .col-lg-6 {
@@ -938,7 +982,25 @@ img {
   .credit-card .card-details button {
     margin-top: 2em;
   }
+
+  /* .payment-amount {
+    color: rgb(255, 213, 0);
+    font-size: 1.5rem;
+  } */
 }
+
+@media only screen and (max-width: 600px) {
+
+  /* Apply styles for small screens here */
+  h4 {
+    font-size: 14px;
+  }
+
+  .payment-amount {
+    font-size: 1.2em;
+  }
+}
+
 
 .card {
   border: none;

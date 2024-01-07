@@ -191,7 +191,7 @@ const Product = ({ addToCart }) => {
                   src={product.image}
                   id="img"
                 /> */}
-                 <Link to={`/product/${product.id}`}>
+                <Link to={`/product/${product.id}`}>
                   <Card.Img
                     className="mx-auto"
                     variant="top"
@@ -225,17 +225,17 @@ const Product = ({ addToCart }) => {
                 </ListGroup>
 
                 <Card.Body>
+                  <Link to={`/product/${product.id}`}>
+                    <Button variant="success" className="viewdetails">
+                      View Details
+                    </Button>
+                  </Link>
                   <Button
                     className="addtocart"
                     onClick={() => addToCart(product)}
                   >
                     Add to Cart
                   </Button>
-                  <Link to={`/product/${product.id}`}>
-                    <Button variant="success" className="viewdetails">
-                      View Details
-                    </Button>
-                  </Link>
                 </Card.Body>
               </Card>
             </>

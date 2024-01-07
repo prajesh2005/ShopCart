@@ -137,7 +137,7 @@ function CartList({ cart, setCart }) {
             .toFixed(2)}
         </h4>
         <button className="checkout" onClick={handleBuyNow}>
-          Checkout
+          Proceed To Buy
         </button>
       </div>
     </div>
